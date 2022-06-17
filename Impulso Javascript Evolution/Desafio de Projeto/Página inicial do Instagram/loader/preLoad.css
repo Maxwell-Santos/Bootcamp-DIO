@@ -1,0 +1,93 @@
+.shimmer {
+  background-image: linear-gradient(90deg,
+      #EEEEEE 0%, #EEEEEE 40%,
+      #DDDDDD 50%, #DDDDDD 55%,
+      #EEEEEE 65%, #EEEEEE 100%);
+
+  background-size: 400%;
+  animation: shimmer 1500ms infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 100%;
+  }
+
+  to {
+    background-position: 0% 0%;
+  }
+}
+.preload{
+  width: 100vw;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  position: absolute;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 99;
+  /* display: none; */
+}
+.img-loader{
+  width: 200px;
+  object-fit: contain;
+}
+p{
+  width: 100%;
+  padding: .8em;
+  background: var(--input-color);
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  color: transparent;
+}
+.imgl{
+  width: 350px;
+  
+}
+.forml:first-child{
+  padding-top: calc(63.97px + 2rem);
+  height: 378px;
+}
+
+.forml{
+  width: 350px;
+  border: 1px solid #e2e2e2;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: .8rem;
+
+  padding: 2rem;
+  padding-bottom: .9rem;
+}
+.cad p{width: 80%;}
+.cad{
+  margin-top: 16px;
+  padding: 1rem;
+}
+.content-load-form{
+  display: flex;
+  flex-flow: column ;
+}
+
+.appsl{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .9rem;
+  margin-top: 1rem;
+  
+}
+.appsl p {
+  margin: 1rem 0;
+  width: 130px;
+  max-width: 200px;
+}
+
+.finish {
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}

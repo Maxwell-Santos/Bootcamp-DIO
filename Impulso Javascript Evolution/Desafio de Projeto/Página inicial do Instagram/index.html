@@ -1,46 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="loader/preLoad.css">
+  <script src="loader/preLoad.js"></script>
+
   <title>Recriando Pág Instagram</title>
 </head>
+
 <body>
+  <div class="preload">
+
+    <!-- <div class=" imgl">imagem</div> -->
+    <img src="img/insta-loader.gif" alt="instagram loader" class="img-loader">
+    <!-- <div class="content-load-form">  
+      <div class="shimmer forml">
+        <p>p</p>
+        <p>p</p>
+        <p>p</p>
+      </div>
+      <div class="shimmer forml cad">
+        <p></p>
+      </div>
+      <div class="appsl">
+        <p>app</p>
+        <p>app</p>
+      </div>
+    </div> -->
+  </div>
   <main>
+
     <section id="left-cont">
-      <img src="" alt="" />
-      <img src="" alt="" />
+      <img src="img/instagram-celular.png" alt="exemplo do instagram no celular" />
+      <img src="img/instagram-celular.png" alt="exemplo do instagram no celular" />
     </section>
 
     <section id="right-cont">
-      <div>
-        <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="nome Instagram">
-        
+      <div class="login">
+        <img src="img/instagram-logo.png" alt="nome Instagram" class="logo">
+
         <div class="form">
-          <input type="text">
-          <input type="password">
-          <button type="submit"></button>
+
+          <input type="text" placeholder="Telefone, nome de usuário ou email" id="email" required>
+
+          <div class="pass-content">
+            <input type="password" placeholder="Senha" id="pass" required>
+            <button onclick="showPass()" disabled>mostrar</button>
+          </div>
+
+          <button type="submit" id="submit" disabled>entrar</button>
         </div>
 
-        <span>ou</span>
-        <a href="">Entrar com o Facebook</a>
-        <a href="">esqueceu a senha?</a>
+        <span class="or">ou</span>
+        <a href="#" class="login-face">
+          <img src="img/icon-face.png" alt="icon Facebook" width="24px">
+          Entrar com o Facebook
+        </a>
+        <a href="#">esqueceu a senha?</a>
 
-        <div class="create">
-          <span>Não tem uma conta?</span>
-          <a href="">Cadastre-se</a>
-        </div>
+      </div>
+      <div class="create">
+        <span>Não tem uma conta?</span>
+        <a href="#">Cadastre-se</a>
       </div>
 
+      <span class="span-download-app">Obtenha o aplicativo.</span>
       <div class="download-app">
-        <span>Obtenha o aplicativo.</span>
-        <button></button>
-        <button></button>
+        <button class="apple-btn">
+          <img src="img/apple-button.png" alt="botão do link para baixar na apple store">
+        </button>
+        <button class="gplay-btn">
+          <img src="img/googleplay-button.png" alt="botão do link para baixar na play store">
+        </button>
       </div>
     </section>
   </main>
-  
+
+  <script>
+    const btnSubmit = document.querySelector('#submit');
+    const inputs = document.querySelectorAll('.form input');
+
+    //Essa função vai realizar um loop em cada um dos inputs e verificar se o valor está preenchido
+
+    function checkInputs(inputs) {
+      var filled = true;
+
+      inputs.forEach(input => {
+
+        //caso algum input esteja vazio, a variável filled, vai ser setada para false e retornada como false
+        //daí o botão permanece desabilitado
+        if (input.value === "") {
+          filled = false;
+        }
+
+      });
+
+      return filled;
+    }
+
+    inputs.forEach(function (input) {
+      //cada tecla vez que alguma tecla for clicada, vai disparar essa função
+      //que chama a função checkInputs, levando a lista de inputs como parâmetro, e verificando se ele é vazio
+      input.addEventListener("keyup", () => {
+        //usei o operador ternário porque achei mais intuitivo 
+        //se a função retornar true, o botão é habilitado, caso contrário, não
+        checkInputs(inputs) ? btnSubmit.disabled = false : btnSubmit.disabled = true;
+
+      });
+    });
+
+    //show password
+    const inputPass = document.querySelector('#pass');
+    const btnShowPass = document.querySelector('.pass-content button');
+
+    function showPass() {
+      inputPass.nodeType.toggle('text')
+    }
+
+    inputPass.addEventListener('keyup', () => {
+      inputPass.value != 0 ?
+        btnShowPass.disabled = false : btnShowPass.disabled = true;
+    })
+
+  </script>
 </body>
+
 </html>
