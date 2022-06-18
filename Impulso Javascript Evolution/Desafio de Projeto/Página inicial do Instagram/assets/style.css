@@ -26,40 +26,18 @@
 
   :root {
     --bg-color: #0095f6;
-    --login-color: #2c2c2c;
+    --login-color: #FFFFFF;
 
     --bg-btn: #0095F6;
-    --bg-btn-disabled: #94a9e4;
+    --bg-btn-disabled: #8bcaf3;
     --bg-cadastra-se: #0095F6;
 
-    --input-color: #222222;
+    --input-color: #FAFAFA;
 
-    --border-color: #4d4d4d;
+    --border-color: #e2e2e2;
 
     --box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
-
   }
-
-  body { color: rgb(236, 236, 236); }
-  
-  .logo { filter: invert(1); }
-
-  input { color: rgb(236, 236, 236); }
-
-  .pass-content button { color: rgb(236, 236, 236); }
-
-  #right-cont .login .login-face {
-    color: #5ee09f;
-  }
-
-  #right-cont .login .link-forgot-pass {
-    color: #5e87e0;
-  }
-
-  #right-cont .span-download-app {
-    color: #222222;
-  }
-
 }
 
 body {
@@ -321,9 +299,59 @@ main {
 }
 
 @media (max-width: 870px) {
+  
   #left-cont {
     display: none;
   }
+
+  @media (prefers-color-scheme: dark) {
+
+    :root {
+      --bg-color: #0095f6;
+      --login-color: #2c2c2c;
+
+      --bg-btn: #0095F6;
+      --bg-btn-disabled: #94a9e4;
+      --bg-cadastra-se: #0095F6;
+
+      --input-color: #222222;
+
+      --border-color: #4d4d4d;
+
+      --box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    body {
+      color: rgb(236, 236, 236);
+    }
+
+    .logo {
+      filter: invert(1);
+    }
+
+    input {
+      color: rgb(236, 236, 236);
+    }
+
+    .pass-content button {
+      color: rgb(236, 236, 236);
+    }
+
+    #right-cont .login .login-face {
+      color: #5e87e0;
+    }
+
+    #right-cont .login .link-forgot-pass {
+      color: #5e87e0;
+    }
+
+    #right-cont .span-download-app {
+      color: #222222;
+    }
+
+  }
+
 }
 
 @media (max-width: 320px) {
