@@ -4,19 +4,62 @@
   box-sizing: border-box;
 }
 
-:root {
-  --bg-color: #0095f6;
-  --login-color: #FFFFFF;
+@media (prefers-color-scheme: ligh) {
 
-  --bg-btn: #0095F6;
-  --bg-btn-disabled: #8bcaf3;
-  --bg-cadastra-se: #0095F6;
+  :root {
+    --bg-color: #0095f6;
+    --login-color: #FFFFFF;
 
-  --input-color: #FAFAFA;
+    --bg-btn: #0095F6;
+    --bg-btn-disabled: #8bcaf3;
+    --bg-cadastra-se: #0095F6;
 
-  --border-color: #e2e2e2;
+    --input-color: #FAFAFA;
 
-  --box-shadow: 2px 2px 10px rgba(0,0,0,0.1)
+    --border-color: #e2e2e2;
+
+    --box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --bg-color: #0095f6;
+    --login-color: #2c2c2c;
+
+    --bg-btn: #0095F6;
+    --bg-btn-disabled: #94a9e4;
+    --bg-cadastra-se: #0095F6;
+
+    --input-color: #222222;
+
+    --border-color: #4d4d4d;
+
+    --box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+
+  }
+
+  body { color: rgb(236, 236, 236); }
+  
+  .logo { filter: invert(1); }
+
+  input { color: rgb(236, 236, 236); }
+
+  .pass-content button { color: rgb(236, 236, 236); }
+
+  #right-cont .login .login-face {
+    color: #5ee09f;
+  }
+
+  #right-cont .login .link-forgot-pass {
+    color: #5e87e0;
+  }
+
+  #right-cont .span-download-app {
+    color: #222222;
+  }
+
 }
 
 body {
@@ -26,8 +69,8 @@ body {
   background: linear-gradient(0deg, rgba(0,149,246,1) 30%, rgba(84,185,250,1) 71%); */
 
   background: #d6249f;
-  background: radial-gradient(circle at 30% 150%, #fdf497ea 5%, #fd5849e5 45%,#d6249ee8 65%,#2859ebe8 105%);
-  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  background: radial-gradient(circle at 30% 150%, #fdf497ea 5%, #fd5849e5 45%, #d6249ee8 65%, #2859ebe8 105%);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
 
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -74,7 +117,8 @@ main {
   max-height: 700px;
   position: absolute;
 }
-#left-cont img:first-child{
+
+#left-cont img:first-child {
   transform: translate(-80px, -20px);
 }
 
@@ -115,6 +159,7 @@ main {
   margin: .5rem 0;
   color: #363636;
 }
+
 #right-cont .login input {
   width: 100%;
   padding: .8em;
@@ -124,7 +169,8 @@ main {
   border-radius: 2px;
 
 }
-#right-cont .login #pass{
+
+#right-cont .login #pass {
   /*calculo da soma do tamanho do botão com o padding do input e uma margem de erro de 2px*/
   /*tudo isso para o botão de mostrar o input não fiquei sobre a senha*/
   padding-right: calc(45.19px + .8em + 2px);
@@ -133,7 +179,7 @@ main {
 
 #right-cont .login input:focus {
   border: 1px solid #bebebe;
-  
+
 }
 
 #right-cont .login .or {
@@ -147,7 +193,7 @@ main {
 
 }
 
-#right-cont .login .login-face{
+#right-cont .login .login-face {
   display: flex;
   align-items: center;
   color: #385185;
@@ -163,7 +209,7 @@ main {
   height: 1px;
   width: 40%;
   background: var(--border-color);
- 
+
 }
 
 #right-cont .login .or::after {
@@ -176,17 +222,24 @@ main {
   background: var(--border-color);
 }
 
-#right-cont .form{
+#right-cont .link-forgot-pass {
+  color: #385185;
+  font-size: .9em;
+}
+
+#right-cont .form {
   width: 100%;
 }
 
-#right-cont .form .pass-content{
+#right-cont .form .pass-content {
   position: relative;
 }
-#right-cont .form .pass-content button:disabled{
+
+#right-cont .form .pass-content button:disabled {
   display: none;
 }
-#right-cont .form .pass-content button{
+
+#right-cont .form .pass-content button {
   display: block;
   position: absolute;
   right: .8em;
@@ -199,12 +252,14 @@ main {
   cursor: pointer;
 
 }
-#right-cont .form #submit:disabled{
+
+#right-cont .form #submit:disabled {
   background: var(--bg-btn-disabled);
   pointer-events: none;
-  
+
 }
-#right-cont .form #submit{
+
+#right-cont .form #submit {
   width: 100%;
   background: var(--bg-btn);
   color: white;
@@ -230,7 +285,8 @@ main {
   border-radius: 5px;
 
 }
-#right-cont .create a{
+
+#right-cont .create a {
   color: var(--bg-cadastra-se);
   font-weight: bolder;
 
@@ -241,6 +297,7 @@ main {
   text-align: center;
   font-size: .9em;
   padding: 1rem 0;
+  color: black;
 
 }
 
@@ -249,7 +306,8 @@ main {
   justify-content: center;
   gap: .9rem;
 }
-.download-app img{
+
+.download-app img {
   width: 100%;
   height: 100%;
 }
@@ -262,14 +320,14 @@ main {
   max-width: 200px;
 }
 
-@media (max-width: 870px){
-  #left-cont{
+@media (max-width: 870px) {
+  #left-cont {
     display: none;
   }
 }
 
-@media (max-width: 320px){
+@media (max-width: 320px) {
   #right-cont .login {
-    padding: 1rem ;
+    padding: 1rem;
   }
 }
