@@ -22,8 +22,12 @@
 body {
   width: 100%;
   height: 100vh;
-  background: var(--bg-color);
-  background: linear-gradient(0deg, rgba(0,149,246,1) 30%, rgba(84,185,250,1) 71%);
+  /* background: var(--bg-color);
+  background: linear-gradient(0deg, rgba(0,149,246,1) 30%, rgba(84,185,250,1) 71%); */
+
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 150%, #fdf497ea 5%, #fd5849e5 45%,#d6249ee8 65%,#2859ebe8 105%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
