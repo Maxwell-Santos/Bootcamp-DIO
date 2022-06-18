@@ -198,7 +198,6 @@ main {
   
 }
 #right-cont .form #submit{
-
   width: 100%;
   background: var(--bg-btn);
   color: white;
@@ -236,7 +235,6 @@ main {
   font-size: .9em;
   padding: 1rem 0;
 
-  font-weight: 600;
 }
 
 .download-app {
@@ -248,7 +246,6 @@ main {
   width: 100%;
   height: 100%;
 }
-
 
 .download-app .apple-btn,
 .gplay-btn {
