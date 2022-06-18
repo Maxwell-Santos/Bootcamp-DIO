@@ -1,0 +1,23 @@
+.preload{
+  width: 100vw;
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  position: absolute;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 99;
+}
+
+.img-loader{
+  width: 200px;
+  object-fit: contain;
+}
+
+.finish {
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
