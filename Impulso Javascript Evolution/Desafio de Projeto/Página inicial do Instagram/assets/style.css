@@ -80,7 +80,10 @@ main {
 
 
 #right-cont {
-  width: 350px;
+  width: 80%;
+  max-width: 350px;
+  min-width: 300px;
+
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
