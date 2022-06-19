@@ -22,8 +22,6 @@
 body {
   width: 100%;
   min-height: 100vh;
-
-  background: #d6249f;
   background: radial-gradient(circle at 30% 100%, #fdf497ea 5%, #fd5849e5 45%, #d6249ee8 65%, #2859ebe8 105%);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
   background-repeat: no-repeat;
