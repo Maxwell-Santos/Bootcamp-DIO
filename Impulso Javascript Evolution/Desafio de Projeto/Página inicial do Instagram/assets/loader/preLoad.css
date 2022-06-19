@@ -1,6 +1,6 @@
-.preload{
+.preload {
   width: 100vw;
-  height: 100vh;
+  min-height: 120vh;
   background: rgb(255, 255, 255);
   position: absolute;
 
@@ -8,11 +8,13 @@
   flex-wrap: wrap;
   justify-content: center;
   z-index: 99;
+  overflow: hidden;
 }
 
-.img-loader{
-  width: 200px;
+.img-loader {
+  width: 90px;
   object-fit: contain;
+  animation: hithere 1s linear infinite;
 }
 
 .finish {
@@ -20,4 +22,34 @@
   opacity: 0;
   pointer-events: none;
   animation: none;
+}
+
+@keyframes hithere {
+  30% {
+    transform: scale(1.2);
+  }
+
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.2);
+  }
+
+  50% {
+    transform: rotate(20deg) scale(1.2);
+  }
+
+  70% {
+    transform: rotate(0deg) scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .preload {
+    background: rgb(44, 44, 44);
+  }
+
 }
