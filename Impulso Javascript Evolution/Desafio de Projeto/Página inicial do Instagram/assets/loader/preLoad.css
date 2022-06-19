@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.false {
+.false { /*Ajuste de tamanho que saíra quando a tela terminar de carregar*/
   min-height: 110%;
 }
 
