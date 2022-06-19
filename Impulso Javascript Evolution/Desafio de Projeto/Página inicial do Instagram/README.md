@@ -31,8 +31,6 @@
 
  <p>As ondas foi algo que peguei ja pronto de um site de cede backgrounds para projetos <a href="https://animatedbackgrounds.me/">Animated Backgrounds</a></p>
 
-* O modo escuro foi feito apenas pensando no mobile, por conta das imagens de celular serem brancas, achei que ficou meio destoante *
-
 ## Tela de Loading
 
 ```js
@@ -96,3 +94,4 @@ inputPass.addEventListener('keyup', () => {
     btnShowPass.disabled = false : btnShowPass.disabled = true;
 })
 ```
+ * O modo escuro foi feito apenas pensando no mobile, por conta das imagens de celular serem brancas, achei que ficou meio destoante *
