@@ -42,14 +42,15 @@
 
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   /* background: var(--bg-color);
   background: linear-gradient(0deg, rgba(0,149,246,1) 30%, rgba(84,185,250,1) 71%); */
 
   background: #d6249f;
-  background: radial-gradient(circle at 30% 150%, #fdf497ea 5%, #fd5849e5 45%, #d6249ee8 65%, #2859ebe8 105%);
+  background: radial-gradient(circle at 30% 100%, #fdf497ea 5%, #fd5849e5 45%, #d6249ee8 65%, #2859ebe8 105%);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
-
+  background-repeat: no-repeat;
+  overflow-x: hidden;
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
 
@@ -69,13 +70,12 @@ a {
 
 main {
   width: 100%;
-  height: 100%;
-
+  height: 90%;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 
   padding: 2rem 0;
+
 }
 
 #left-cont {
@@ -109,6 +109,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  /* flex-direction: column; */
 }
 
 #right-cont .login {
@@ -298,8 +299,29 @@ main {
   max-width: 200px;
 }
 
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer span {
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 1rem;
+}
+
+footer span a {
+  color: var(--footer-span-color);
+  border-bottom: 1px solid black;
+  transition: all 1s ease;
+}
+footer span a:hover {
+  font-weight: 700;
+}
+
 @media (max-width: 870px) {
-  
+
   #left-cont {
     display: none;
   }
@@ -315,6 +337,7 @@ main {
       --bg-cadastra-se: #0095F6;
 
       --input-color: #222222;
+      --footer-span-color: #222222;
 
       --border-color: #4d4d4d;
 
@@ -348,6 +371,14 @@ main {
 
     #right-cont .span-download-app {
       color: #222222;
+    }
+
+    footer span {
+      color: var(--footer-span-color);
+    }
+
+    footer span a {
+      color: var(--footer-span-color);
     }
 
   }
