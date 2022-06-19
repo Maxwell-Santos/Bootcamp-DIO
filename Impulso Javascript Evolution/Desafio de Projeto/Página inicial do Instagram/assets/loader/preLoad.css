@@ -51,9 +51,11 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .preload {
-    background: rgb(44, 44, 44);
-  }
 
+@media (max-width: 870px) {
+  @media (prefers-color-scheme: dark) {
+    .preload {
+      background: rgb(44, 44, 44);
+    }
+  }
 }
