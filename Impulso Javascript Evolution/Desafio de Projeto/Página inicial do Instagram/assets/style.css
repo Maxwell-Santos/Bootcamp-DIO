@@ -368,3 +368,18 @@ footer span a:hover {
     padding: 1rem;
   }
 }
+
+*::-webkit-scrollbar {
+  width: 7px;
+  
+}
+
+*::-webkit-scrollbar-track {
+  background: #2859ebb7;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(230, 230, 255);
+  border-radius: 20px;
+  border: 2px solid #2859ebb7;  /*creates padding around scroll thumb*/
+}

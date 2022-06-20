@@ -131,8 +131,15 @@
     }
     
     inputPass.addEventListener('keyup', () => {
-      inputPass.value != 0 ?
-        btnShowPass.disabled = false : btnShowPass.disabled = true;
+
+      if(inputPass.value == 0){
+        btnShowPass.disabled = true;
+        inputPass.setAttribute('type', 'password');
+        
+      } else {
+        btnShowPass.disabled = false;
+
+      }
     })
 
   </script>
