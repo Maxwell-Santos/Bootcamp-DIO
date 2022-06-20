@@ -1,6 +1,6 @@
 # Login reimaginado Instagram
 
-- Instagram Reimaginado: <a href="https://reimagined-login-instagram.vercel.app/">Link do site</a>
+- Instagram Reimaginado: <a href="https://instagram-reimagined.vercel.app/">Link do site</a>
 
 ## As cores se adaptam ao tema do seu aparelho !
   
