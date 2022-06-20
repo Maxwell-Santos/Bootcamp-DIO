@@ -289,14 +289,6 @@ footer span {
   margin-bottom: 1rem;
 }
 
-footer span a {
-  color: var(--footer-span-color);
-  border-bottom: 1px solid black;
-  transition: all 1s ease;
-}
-footer span a:hover {
-  font-weight: 700;
-}
 
 @media (max-width: 870px) {
 
@@ -352,10 +344,6 @@ footer span a:hover {
     }
 
     footer span {
-      color: var(--footer-span-color);
-    }
-
-    footer span a {
       color: var(--footer-span-color);
     }
 
